@@ -6,6 +6,9 @@ class Login extends CI_Controller {
     
     //Función que por defecto muestra el formulario de entrada a la aplicación para hacer login
     public function index(){
+        
+       
+        
         $data['title'] = 'Inicio';
         $data_body['error'] = 0;
         $datos_plantilla["head"] = $this->load->view('plantilla/head_login', $data);
@@ -16,6 +19,8 @@ class Login extends CI_Controller {
    
     //con esta función procesamos el formulario de login y creamos la lógica de entrada
     public function procesar_form_login(){
+        
+        
         //si se ha hecho submit en el formulario...
         if(isset($_POST['login'])){
             $username = $this->input->post("username");

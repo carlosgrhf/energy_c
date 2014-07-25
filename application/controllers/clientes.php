@@ -36,7 +36,8 @@ class Clientes extends CI_Controller {
             $config['full_tag_open'] = '<div id="paginacion">';//el div que debemos maquetar
             $config['full_tag_close'] = '</div>';//el cierre del div de la paginación
             $this->pagination->initialize($config); //inicializamos la paginación        
-            $dataclientes["clientes"] = $this->Clientes_model->total_paginados($config['per_page'],$this->uri->segment(3));            
+            $dataclientes["clientes"] = $this->Clientes_model->total_paginados($config['per_page'],$this->uri->segment(3)); 
+            
                 
              
             $data['title'] = 'Clientes';
