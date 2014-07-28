@@ -42,6 +42,22 @@
                                 </a>
                         </li>
                         <?php 
+                        if ($organizaciones==1){
+                            echo '<li class="active open">';
+                        } else {
+                            echo '<li>';
+                        }
+                        ?>
+                                <a href="<?php echo base_url(); ?>organizaciones"><i class="clip-user-5"></i>
+                                        <span class="title"> Organizaciones </span>
+                                        <?php 
+                                        if ($organizaciones==1){
+                                            echo '<span class="selected"></span>';
+                                        } 
+                                        ?>                                        
+                                </a>
+                        </li>                        
+                        <?php 
                         if ($clientes==1){
                             echo '<li class="active open">';
                         } else {
@@ -52,6 +68,22 @@
                                         <span class="title"> Clientes </span>
                                         <?php 
                                         if ($clientes==1){
+                                            echo '<span class="selected"></span>';
+                                        } 
+                                        ?>  
+                                </a>
+                        </li>
+                        <?php 
+                        if ($agrupaciones==1){
+                            echo '<li class="active open">';
+                        } else {
+                            echo '<li>';
+                        }
+                        ?>
+                                <a href="<?php echo base_url(); ?>agrupaciones"><i class="clip-grid"></i>
+                                        <span class="title"> Agrupaciones </span>
+                                        <?php 
+                                        if ($agrupaciones==1){
                                             echo '<span class="selected"></span>';
                                         } 
                                         ?>  

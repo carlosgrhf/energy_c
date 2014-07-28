@@ -92,8 +92,9 @@
                                                                                                 foreach ($usuarios as $usuario) { 
                                                                                                     
                                                                                                     //antes de pintar la tabla traenos el nombre del cliente
-                                                                                                    $idCliente=$usuario->Clientes_idClientes;
-                                                                                                    $NombreEmpresa = $ci->Clientes_model->dame_solo_nombre($idCliente);   
+                                                                                                    $idOrganizacion=$usuario->Organizaciones_idOrganizaciones;
+                                                                                                    
+                                                                                                    $NombreEmpresa = $ci->Clientes_model->dame_solo_nombre($idOrganizacion);   
                                                                                                     
                                                                                                     echo '<tr>';
                                                                                                     echo '<td>'.$usuario->idUsuarios.'</td>';
