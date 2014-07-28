@@ -32,10 +32,10 @@
                             echo '<li>';
                         }
                         ?>
-                                <a href="<?php echo base_url(); ?>menus"><i class="clip-home-3"></i>
+                                <a href="<?php echo base_url(); ?>menus"><i class="clip-list-4"></i>
                                         <span class="title"> Menús </span>
                                         <?php 
-                                        if ($dashboard==1){
+                                        if ($menus==1){
                                             echo '<span class="selected"></span>';
                                         } 
                                         ?>                                        
@@ -102,22 +102,22 @@
                                 </a>
                                 <ul class="sub-menu">
                                         <li>
-                                                <a href="ui_elements.html">
+                                                <a href="<?php echo base_url(); ?>menus">
                                                         <span class="title"> Contador 1 </span>
                                                 </a>
                                         </li>
                                         <li>
-                                                <a href="ui_buttons.html">
+                                                <a href="<?php echo base_url(); ?>menus">
                                                         <span class="title"> Contador2 </span>
                                                 </a>
                                         </li>
                                         <li>
-                                                <a href="ui_animations.html">
+                                                <a href="<?php echo base_url(); ?>menus">
                                                         <span class="title"> Contador 3 </span>
                                                 </a>
                                         </li>
                                         <li>
-                                                <a href="ui_modals.html">
+                                                <a href="<?php echo base_url(); ?>menus">
                                                         <span class="title"> Contador 4 </span>
                                                 </a>
                                         </li>                                        
