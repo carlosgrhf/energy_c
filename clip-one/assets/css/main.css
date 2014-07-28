@@ -1243,6 +1243,7 @@ color: #AAAAAA !important;
 .container {
 	max-width: none !important;
 	width:auto !important;
+        min-height: 47px;
 }
 .footer-fixed .main-content .container{
 	margin-bottom:22px;
