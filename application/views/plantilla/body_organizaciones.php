@@ -32,8 +32,12 @@
 					<!-- start: PAGE HEADER -->
 					<div class="row">
 						<div class="col-sm-12">							
-							
-                                                    
+							<ol class="breadcrumb">
+								<li class="active">
+									<i class="clip-user-5"></i>
+										Organizaciones
+								</li>
+							</ol>                                                    
                                                         <div class="page-header">
                                                                 <h1>Organizaciones <small>Organizaciones dadas de alta actualmente en la aplicación</small></h1>
                                                         </div>
@@ -41,11 +45,92 @@
 					</div>
 					<!-- end: PAGE HEADER -->
 					<!-- start: PAGE CONTENT -->
-                                        <p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices lacus non diam convallis rhoncus. Cras in leo eu sem dictum tincidunt nec ut neque. In faucibus porta leo nec cursus. Fusce ac pretium nunc. Curabitur at faucibus nisl, at consequat sapien. Suspendisse fringilla mollis auctor. Vestibulum scelerisque in urna ut mattis. In hac habitasse platea dictumst. Aenean a odio vitae mauris viverra dapibus volutpat ut orci.
-                                        </p>
-                                        <h2>en construcción!</h2>
+					<div class="row">
+						<div class="col-md-12">
+							<!-- start: RESPONSIVE TABLE PANEL -->
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<i class="fa fa-external-link-square"></i>
+									Listado de organizaciones
+									<div class="panel-tools">
+										<a class="btn btn-xs btn-link panel-collapse collapses" href="#">
+										</a>
+										<a class="btn btn-xs btn-link panel-config" href="#panel-config" data-toggle="modal">
+											<i class="fa fa-wrench"></i>
+										</a>
+										<a class="btn btn-xs btn-link panel-refresh" href="#">
+											<i class="fa fa-refresh"></i>
+										</a>
+										<a class="btn btn-xs btn-link panel-expand" href="#">
+											<i class="fa fa-resize-full"></i>
+										</a>
+										<a class="btn btn-xs btn-link panel-close" href="#">
+											<i class="fa fa-times"></i>
+										</a>
+									</div>
+								</div>
+								<div class="panel-body">
+									<div class="table-responsive">
+                                                                            <a class="btn btn-primary tooltips" href="<?php echo base_url(); ?>organizaciones/nuevo" data-placement="right" data-original-title="Añadir nueva organización">
+                                                                                <i class="fa fa-plus"></i> Nueva Organización
+                                                                            </a>
+                                                                            <br /><br />
+										<table class="table table-bordered table-hover" id="sample-table-1">
+											<thead>
+												<tr>
+													<th>Id</th>
+													<th>Nombre</th>
+													<th>CIF</th>
+													<th>Teléfono</th>
+													<th>Email</th>
+                                                                                                        <th>Descripción</th>
+                                                                                                        <th style="min-width: 200px;">Acciones</th>
+												</tr>
+											</thead>
+											<tbody>
+                                                                                                <?php 
+                                                                                                foreach ($organizaciones as $organizacion) { 
+                                                                                                    echo '<tr>';
+                                                                                                    echo '<td>'.$organizacion->idOrganizaciones.'</td>';
+                                                                                                    echo '<td>'.$organizacion->NombreOrganizacion.'</td>';
+                                                                                                    echo '<td>'.$organizacion->CIF.'</td>';
+                                                                                                    echo '<td>'.$organizacion->Tlf.'</td>';
+                                                                                                    echo '<td>'.$organizacion->Email.'</td>';
+                                                                                                    echo '<td>'.$organizacion->Descripcion.'</td>';
+                                                                                                    echo '<td>
+                                                                                                                <a class="btn btn-green tooltips" href="'.base_url().'organizaciones/ver_usuarios/'.$organizacion->idOrganizaciones.'" data-placement="top" data-original-title="Usuarios">
+                                                                                                                    <i class="fa fa-user fa fa-white"></i>
+                                                                                                                </a>                                                                                                                
+                                                                                                                <a class="btn btn-primary tooltips" href="'.base_url().'organizaciones/ver/'.$organizacion->idOrganizaciones.'" data-placement="top" data-original-title="Ver Organización">
+                                                                                                                    <i class="fa fa-share"></i>
+                                                                                                                </a>
+                                                                                                                <a class="btn btn-teal tooltips" href="'.base_url().'organizaciones/editar/'.$organizacion->idOrganizaciones.'" data-placement="top" data-original-title="Editar Organización">
+                                                                                                                    <i class="fa fa-edit"></i>
+                                                                                                                </a>
+                                                                                                                <a class="btn btn-bricky tooltips" href="'.base_url().'clientes/borrar/'.$organizacion->idOrganizaciones.'" data-placement="top" data-original-title="Borrar Organización">
+                                                                                                                    <i class="fa fa-times fa fa-white"></i>
+                                                                                                                </a>
+                                                                                                          </td>';
+                                                                                                    echo '</tr>';
+                                                                                                } 
+                                                                                                
+                                                                                                ?>
+                                                                                            
+											</tbody>
+										</table>
+                                                                            <?=$this->pagination->create_links()?>
+									</div>
+								</div>
+							</div>
+							<!-- end: RESPONSIVE TABLE PANEL -->
+						</div>
+					</div>
+					<!-- end: PAGE CONTENT-->
                                         
+                                        
+                                            
+                                            
+                                                
                                         
 				</div>
 			</div>

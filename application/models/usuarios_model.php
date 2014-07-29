@@ -49,7 +49,8 @@ class Usuarios_model extends CI_Model {
                 $FechaAlta=$row->FechaAlta;
                 $TipoUsuario=$row->TipoUsuario;
                 $Estado=$row->Estado;
-                $Clientes_idClientes=$row->Clientes_idClientes;
+                $Menus_idMenus=$row->Menus_idMenus;
+                $Organizaciones_idOrganizaciones=$row->Organizaciones_idOrganizaciones;
             }
             
             $datosusuario = array(
@@ -68,7 +69,8 @@ class Usuarios_model extends CI_Model {
                         'FechaAlta' => $FechaAlta,
                         'TipoUsuario' => $TipoUsuario,
                         'Estado' => $Estado,
-                        'Clientes_idClientes' => $Clientes_idClientes
+                        'Menus_idMenus' => $Menus_idMenus,
+                        'Organizaciones_idOrganizaciones' => $Organizaciones_idOrganizaciones
                      );
             
             return $datosusuario;
@@ -78,9 +80,9 @@ class Usuarios_model extends CI_Model {
     }
     
     //modelo que obtiene los datos de los clientes a partir de un id
-    function dame_usuarios_de_cliente($idCliente) {
+    function dame_usuarios_de_organizacion($idOrganizacion) {
         $this->db->from('usuarios');
-        $this->db->where('Clientes_idClientes',$idCliente);
+        $this->db->where('Organizaciones_idOrganizaciones',$idOrganizacion);
         $query = $this->db->get(); 
         
         if($query->num_rows() > 0){

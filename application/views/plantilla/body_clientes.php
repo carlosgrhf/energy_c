@@ -84,7 +84,7 @@
 													<th>Teléfono</th>
 													<th>Email</th>
                                                                                                         <th>Descripción</th>
-                                                                                                        <th style="min-width: 200px;">Acciones</th>
+                                                                                                        <th style="min-width: 150px;">Acciones</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -97,10 +97,7 @@
                                                                                                     echo '<td>'.$cliente->Tlf.'</td>';
                                                                                                     echo '<td>'.$cliente->Email.'</td>';
                                                                                                     echo '<td>'.$cliente->Descripcion.'</td>';
-                                                                                                    echo '<td>
-                                                                                                                <a class="btn btn-green tooltips" href="'.base_url().'clientes/ver_usuarios/'.$cliente->idClientes.'" data-placement="top" data-original-title="Usuarios">
-                                                                                                                    <i class="fa fa-user fa fa-white"></i>
-                                                                                                                </a>                                                                                                                
+                                                                                                    echo '<td>                                                                                                              
                                                                                                                 <a class="btn btn-primary tooltips" href="'.base_url().'clientes/ver/'.$cliente->idClientes.'" data-placement="top" data-original-title="Ver Cliente">
                                                                                                                     <i class="fa fa-share"></i>
                                                                                                                 </a>

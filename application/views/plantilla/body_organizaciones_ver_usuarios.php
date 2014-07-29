@@ -35,16 +35,16 @@
                                                         <ol class="breadcrumb">
 								<li>
 									<i class="clip-home-2"></i>
-									<a href="<?php echo base_url(); ?>clientes">
-										Clientes
+									<a href="<?php echo base_url(); ?>organizaciones">
+										Organizaciones
 									</a>
 								</li>
 								<li class="active">
-									Usuarios del cliente <?php echo $NombreEmpresa; ?>
+									Usuarios de la organización <?php echo $NombreOrganizacion; ?>
 								</li>
 							</ol>
                                                         <div class="page-header">
-                                                                <h1>Usuarios de <?php echo $NombreEmpresa; ?> <small>Gestiona los usuarios del cliente <?php echo $NombreEmpresa; ?></small></h1>
+                                                                <h1>Usuarios de <?php echo $NombreOrganizacion; ?> <small>Gestiona los usuarios de la organización <?php echo $NombreOrganizacion; ?></small></h1>
                                                         </div>
 						</div>
 					</div>
@@ -56,7 +56,7 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<i class="fa fa-external-link-square"></i>
-									Listado de usuarios de <?php echo $NombreEmpresa; ?>
+									Listado de usuarios de <?php echo $NombreOrganizacion; ?>
 									<div class="panel-tools">
 										<a class="btn btn-xs btn-link panel-collapse collapses" href="#">
 										</a>
@@ -76,8 +76,8 @@
 								</div>
 								<div class="panel-body">
 									<div class="table-responsive">
-                                                                            <a class="btn btn-primary tooltips" href="<?php echo base_url(); ?>usuarios/nuevo/<?php echo $idClientes; ?>" data-placement="right" data-original-title="Añadir nuevo usuario a <?php echo $NombreEmpresa; ?>">
-                                                                                <i class="fa fa-plus"></i> Nuevo Usuario <?php echo $NombreEmpresa; ?>
+                                                                            <a class="btn btn-primary tooltips" href="<?php echo base_url(); ?>usuarios/nuevo/<?php echo $idOrganizaciones; ?>" data-placement="right" data-original-title="Añadir nuevo usuario a <?php echo $NombreOrganizacion; ?>">
+                                                                                <i class="fa fa-plus"></i> Nuevo Usuario <?php echo $NombreOrganizacion; ?>
                                                                             </a>
                                                                             <br /><br />
 										<table class="table table-bordered table-hover" id="sample-table-1">
@@ -102,7 +102,7 @@
                                                                                                     echo '<td>'.$usuario->Usuario.'</td>';
                                                                                                     echo '<td>'.$usuario->TipoUsuario.'</td>';
                                                                                                     echo '<td>'.$usuario->Estado.'</td>';
-                                                                                                    echo '<td>'.$usuario->Clientes_idClientes.'</td>';
+                                                                                                    echo '<td>'.$usuario->Organizaciones_idOrganizaciones.'</td>';
                                                                                                     echo '<td>'.$usuario->Descripcion.'</td>';
                                                                                                     echo '<td>                                                                                                                                                                                                                                
                                                                                                                 <a class="btn btn-primary tooltips" href="'.base_url().'usuarios/ver/'.$usuario->idUsuarios.'" data-placement="top" data-original-title="Ver Usuario">

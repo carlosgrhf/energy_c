@@ -200,7 +200,7 @@ class Usuarios extends CI_Controller {
     }
     
     //Función que muestra la edición de un cliente
-    public function nuevo($idClientes){
+    public function nuevo($idOrganizaciones){
                   
         $login_ok = $this->session->userdata('login_ok');             
         
@@ -217,7 +217,7 @@ class Usuarios extends CI_Controller {
             $this->load->model('Usuarios_model');
             
                 
-            $idUsuario=$this->Usuarios_model->inserta_usuario($idClientes);           
+            $idUsuario=$this->Usuarios_model->inserta_usuario($idOrganizaciones);           
             $datausuarios = $this->Usuarios_model->dame_usuario($idUsuario);     
                 
             $data['title'] = 'Editar Cliente';
@@ -254,12 +254,12 @@ class Usuarios extends CI_Controller {
             //Saco todos los datos del usuario
             $datausuarios = $this->Usuarios_model->dame_usuario($idUsuario);  
             
-            $idCliente = $datausuarios['Clientes_idClientes'];            
+            $idOrganizaciones = $datausuarios['Organizaciones_idOrganizaciones'];            
              
             //Necesito saber el nombre de la empresa a la que pertenece así que cargo el modelo clientes y le paso el $idCliente
             //que he sacado en el paso anterior
             $this->load->model('Clientes_model');
-            $dataclientes = $this->Clientes_model->dame_cliente($idCliente);
+            $dataclientes = $this->Clientes_model->dame_cliente($idOrganizaciones);
             
             //Añado el dato del cliente al array de datos del usuario para que la vista lo pinte
             $datausuarios['NombreEmpresa'] = $dataclientes['NombreEmpresa'];            
@@ -287,7 +287,7 @@ class Usuarios extends CI_Controller {
         } else {
             
             //con la libreria Navbar seleccionamos en que posición estamos para pintar el navbar
-            $posicion="clientes";
+            $posicion="usuarios";
             $this->load->library('navbar');
             $eleccion = $this->navbar->navbar_posicion($posicion);
             
